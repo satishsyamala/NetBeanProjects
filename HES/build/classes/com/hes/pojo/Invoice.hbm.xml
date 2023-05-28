@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hes.pojo.Invoice" schema="hes" table="Invoice">
+        <id name="invoiceId" type="java.lang.Integer">
+            <column name="invoiceId"/>
+            <generator class="identity">
+            </generator>
+        </id>
+        <property name="invoiceNumber" type="string">
+            <column length="20" name="invoiceNumber" not-null="true" unique="true"/>
+        </property>
+        <property name="DispachedDate" type="string">
+            <column length="30" name="DispachedDate"/>
+        </property>
+        <property name="beckInvAmount" type="double">
+            <column length="30" name="beckInvAmount"/>
+        </property>
+        <property name="beckInvDate" type="string">
+            <column length="30" name="beckInvDate"/>
+        </property>
+        <property name="beckInvNo" type="string">
+            <column length="30" name="beckInvNo"/>
+        </property>
+        <property name="custDiscount" type="double">
+            <column  name="custDiscount"/>
+        </property>
+        <property name="dateOfRemovelGoods" type="string">
+            <column length="30" name="dateOfRemovelGoods"/>
+        </property>
+        <property name="dispachedFrom" type="string">
+            <column length="30" name="dispachedFrom"/>
+        </property>
+        <property name="dispachedTo" type="string">
+            <column length="30" name="dispachedTo"/>
+        </property>
+        <property name="documentThrough" type="string">
+            <column length="30" name="documentThrough"/>
+        </property>
+        <property name="enrtyPageNo" type="string">
+            <column length="30" name="enrtyPageNo"/>
+        </property>
+        <property name="exciseDuty" type="boolean">
+            <column length="30" name="exciseDuty"/>
+        </property>
+        <property name="exciseInvNo" type="string">
+            <column length="30" name="exciseInvNo"/>
+        </property>
+        <property name="invoiceDate" type="java.util.Date">
+            <column  name="invoiceDate"/>
+        </property>
+        <property name="invoiceType" type="integer">
+            <column  name="invoiceType"/>
+        </property>
+        <property name="modeOfTrns" type="string">
+            <column length="30" name="modeOfTrns"/>
+        </property>
+        <property name="orderDate" type="string">
+            <column length="30" name="orderDate"/>
+        </property>
+        <property name="orderNo" type="string">
+            <column length="30" name="orderNo"/>
+        </property>
+        <property name="ourDCDate" type="string">
+            <column length="30" name="ourDCDate"/>
+        </property>
+        <property name="ourDCNo" type="string">
+            <column length="30" name="ourDCNo"/>
+        </property>
+        <property name="payByotMS" type="string">
+            <column length="30" name="payByotMS"/>
+        </property>
+        <property name="payRs" type="double">
+            <column name="payRs"/>
+        </property>
+        <property name="poDate" type="string">
+            <column length="30" name="poDate"/>
+        </property>
+        <property name="poNo" type="string">
+            <column length="30" name="poNo"/>
+        </property>
+        <property name="proDiscount" type="integer">
+            <column name="proDiscount"/>
+        </property>
+        <property name="proOtherCharges" type="integer">
+            <column length="30" name="proOtherCharges"/>
+        </property>
+        <property name="rrorLrNo" type="string">
+            <column length="30" name="rrorLrNo"/>
+        </property>
+        <property name="suppInvAmount" type="integer">
+            <column length="30" name="suppInvAmount"/>
+        </property>
+        <property name="suppInvBill" type="string">
+            <column length="30" name="suppInvBill"/>
+        </property>
+        <property name="vatOrCst" type="integer">
+            <column name="vatOrCst"/>
+        </property>
+        <property name="vehicleRegNo" type="string">
+            <column length="30" name="vehicleRegNo"/>
+        </property>
+         <property name="finalDiscount" type="double">
+            <column  name="finalDiscount"/>
+        </property>
+         <property name="finaleOtherCharges" type="double">
+            <column  name="finaleOtherCharges"/>
+        </property>
+         <property name="finalexciseDuty" type="double">
+            <column  name="finalexciseDuty"/>
+        </property>
+         <property name="grandTotal" type="double">
+            <column  name="grandTotal"/>
+        </property>
+         <property name="finaleVatOrCst" type="double">
+            <column  name="finaleVatOrCst"/>
+        </property>
+
+        <property name="custname" type="string">
+            <column length="200" name="custname" />
+        </property>
+        <property name="custcommissionerate" type="string">
+            <column length="50" name="custcommissionerate"/>
+        </property>
+        <property name="custcstNumber" type="string">
+            <column length="50" name="custcstNumber"/>
+        </property>
+        <property name="custaddress" type="string">
+            <column length="1000" name="custaddress"/>
+        </property>
+        <property name="custtinNumber" type="string">
+            <column length="30" name="custtinNumber"/>
+        </property>
+        <property name="custdebitEntryNo" type="string">
+            <column length="50" name="custdebitEntryNo"/>
+        </property>
+        <property name="custcerNo" type="string">
+            <column length="50" name="custcerNo"/>
+        </property>
+        <property name="custdiscription" type="string">
+            <column length="200" name="custdiscription"/>
+        </property>
+        <property name="custdivision" type="string">
+            <column length="50" name="custdivision"/>
+        </property>
+        <property name="custeccNo" type="string">
+            <column length="50" name="custeccNo"/>
+        </property>
+        <property name="custlandLine" type="string">
+            <column length="50" name="custlandLine"/>
+        </property>
+        <property name="custphnNumber" type="string">
+            <column length="50" name="custphnNumber"/>
+        </property>
+        <property name="custrangeAddress" type="string">
+            <column length="1000" name="custrangeAddress"/>
+        </property>
+        <property name="custdiscount" type="double">
+            <column name="cstdiscount"/>
+        </property>
+
+         <property name="invoiceTime" type="string">
+            <column length="200" name="invoiceTime" />
+        </property>
+
+         <property name="removalOfGoodsTime" type="string">
+            <column length="200" name="removalOfGoodsTime" />
+        </property>
+
+         <property name="splrInvoiceTime" type="string">
+            <column length="200" name="splrInvoiceTime" />
+        </property>
+
+        <property name="splrname" type="string">
+            <column length="200" name="splrname" />
+        </property>
+        <property name="splrcommissionerate" type="string">
+            <column length="50" name="splrcommissionerate"/>
+        </property>
+        <property name="splrcstNumber" type="string">
+            <column length="50" name="splrcstNumber"/>
+        </property>
+        <property name="splraddress" type="string">
+            <column length="1000" name="splraddress"/>
+        </property>
+        <property name="splrtinNumber" type="string">
+            <column length="30" name="splrtinNumber"/>
+        </property>
+        <property name="splrdebitEntryNo" type="string">
+            <column length="50" name="splrdebitEntryNo"/>
+        </property>
+        <property name="splrcerNo" type="string">
+            <column length="50" name="splrcerNo"/>
+        </property>
+        <property name="splrdiscription" type="string">
+            <column length="200" name="splrdiscription"/>
+        </property>
+        <property name="splrdivision" type="string">
+            <column length="50" name="splrdivision"/>
+        </property>
+        <property name="splreccNo" type="string">
+            <column length="50" name="splreccNo"/>
+        </property>
+        <property name="splrlandLine" type="string">
+            <column length="50" name="splrlandLine"/>
+        </property>
+        <property name="splrphnNumber" type="string">
+            <column length="50" name="splrphnNumber"/>
+        </property>
+        <property name="splrrangeAddress" type="string">
+            <column length="1000" name="splrrangeAddress"/>
+        </property>
+        <property name="splrdiscount" type="double">
+            <column name="splrdiscount"/>
+        </property>
+
+         <property name="exciseDutyper" type="double">
+            <column  name="exciseDutyper" />
+        </property>
+         <property name="eductionCess" type="double">
+            <column  name="eductionCess" />
+        </property>
+         <property name="SandHEduCess" type="double">
+            <column  name="SandHEduCess" />
+        </property>
+         <property name="cst" type="double">
+            <column  name="cst" />
+        </property>
+         <property name="vat" type="double">
+            <column  name="vat" />
+        </property>
+
+
+    </class>
+</hibernate-mapping>

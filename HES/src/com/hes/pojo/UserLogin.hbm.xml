@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.hes.pojo.UserLogin" schema="hes" table="UserLogin">
+    <id name="userId" type="java.lang.Integer">
+      <column name="userID"/>
+      <generator class="identity">
+            </generator>
+    </id>
+    <property name="loginId" type="string">
+      <column name="loginId" not-null="true" unique="true"/>
+    </property>
+    <property name="password" type="string">
+      <column name="password"/>
+    </property>
+    <property name="userName" type="string">
+      <column name="userName"/>
+    </property>
+    <property name="userType" type="string">
+      <column name="userType"/>
+    </property>
+    <property name="status" type="string">
+      <column name="status"/>
+    </property>
+    <property name="createdOn" type="java.util.Date">
+      <column name="createdOn"/>
+    </property>
+  </class>
+</hibernate-mapping>

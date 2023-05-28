@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.hes.pojo.CustomerProductMap" schema="hes" table="CustomerProductMap">
+    <id name="customerProductMap" type="java.lang.Integer">
+      <column name="customerProductMap"/>
+      <generator class="identity">
+            </generator>
+    </id>
+    <many-to-one class="com.hes.pojo.Customer" column="customer" lazy="false" name="customer"/>
+    <many-to-one class="com.hes.pojo.Product" column="product" lazy="false" name="product"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hes.pojo.BasicInformation" schema="hes" table="BasicInformation" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity">
+            </generator>
+        </id>
+        <property name="exciseDuty" type="double">
+            <column  name="exciseDuty" />
+        </property>
+         <property name="eductionCess" type="double">
+            <column  name="eductionCess" />
+        </property>
+         <property name="SandHEduCess" type="double">
+            <column  name="SandHEduCess" />
+        </property>
+         <property name="cst" type="double">
+            <column  name="cst" />
+        </property>
+         <property name="vat" type="double">
+            <column  name="vat" />
+        </property>
+    </class>
+</hibernate-mapping>

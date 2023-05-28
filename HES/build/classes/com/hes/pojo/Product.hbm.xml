@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hes.pojo.Product" schema="hes" table="Product">
+        <id name="productId" type="java.lang.Integer">
+            <column name="productId"/>
+            <generator class="identity">
+            </generator>
+        </id>
+        <property name="productName" type="string">
+            <column length="200" name="productName" not-null="true" unique="true"/>
+        </property>
+        <property name="createdOn" type="java.util.Date">
+            <column name="createdOn"/>
+        </property>
+        <property name="purchaseCost" type="double">
+            <column name="purchaseCost"/>
+        </property>
+        <property name="packageSize" type="integer">
+            <column name="packagesize"/>
+        </property>
+        <property name="status" type="string">
+            <column length="20" name="status"/>
+        </property>
+        <property name="productCode" type="string">
+            <column length="30" name="productCode"/>
+        </property>
+        <property name="identifMark" type="string">
+            <column length="30" name="identifMark"/>
+        </property>
+        <many-to-one class="com.hes.pojo.Supplier" column="suppier" lazy="false" name="supplier"/>
+    </class>
+</hibernate-mapping>

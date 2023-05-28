@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/WMS</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">t0day</property>
+       <!--  <property name="hibernate.hbm2ddl.auto">update</property> -->
+        <property name="hibernate.show_sql">true</property> 
+        <mapping class="wms1.pojos.Brands"/>
+        <mapping class="wms1.pojos.Users"/>
+        <mapping class="wms1.pojos.Items"/>
+        <mapping class="wms1.pojos.Purchases"/>
+        <mapping class="wms1.pojos.PurchasesItems"/>
+        <mapping class="wms1.pojos.Sales"/>
+        <mapping class="wms1.pojos.SalesItems"/>
+        <mapping class="wms1.pojos.ServiceTypes"/>
+        <mapping class="wms1.pojos.Services"/>
+        <mapping class="wms1.pojos.ServiceItems"/>
+        <mapping class="wms1.pojos.Settings"/>
+        <mapping class="wms1.pojos.StockInventory"/>
+        <mapping class="wms1.pojos.StockTakItems"/>
+        <mapping class="wms1.pojos.StockTake"/>
+         <mapping class="wms1.pojos.StockTakAdj"/>
+    </session-factory>
+</hibernate-configuration>

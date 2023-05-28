@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.hes.pojo.OtherInvoiceData" schema="hes"  table="OtherInvoiceData">
+      
+       <id name="otherInvoiceDataId" type="java.lang.Integer">
+            <column name="otherInvoiceDataId"/>
+            <generator class="identity">
+            </generator>
+        </id>
+        <property name="amtType" type="integer">
+            <column  name="amtType" />
+        </property>
+         <property name="amount" type="double">
+            <column  name="amount"/>
+        </property>
+        <property name="discription" type="string">
+            <column length="1000" name="discription"/>
+        </property>
+        <property name="headingLine" type="string">
+            <column  length="1000" name="headingLine"/>
+        </property>
+      
+        <property name="otherInfo" type="string">
+            <column length="1000" name="otherInfo"/>
+        </property>
+
+         <property name="orderBy" type="integer">
+            <column  name="orderBy" />
+        </property>
+       
+
+ 
+
+         <many-to-one class="com.hes.pojo.Invoice" column="invoice" lazy="false" name="invoice"/>
+  </class>
+</hibernate-mapping>

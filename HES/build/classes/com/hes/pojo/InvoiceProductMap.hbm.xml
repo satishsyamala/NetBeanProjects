@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class  name="com.hes.pojo.InvoiceProductMap" schema="hes"  table="InvoiceProductMap">
+       <id name="invoiceProductMapId" type="java.lang.Integer">
+            <column name="invoiceProductMapId"/>
+            <generator class="identity">
+            </generator>
+        </id>
+        <property name="productId" type="integer">
+            <column  name="productId" />
+        </property>
+         <property name="discount" type="double">
+            <column  name="discount"/>
+        </property>
+        <property name="identifyMark" type="string">
+            <column length="30" name="identifyMark"/>
+        </property>
+        <property name="noOfPackets" type="integer">
+            <column  name="noOfPackets"/>
+        </property>
+        <property name="otherCharges" type="double">
+            <column  name="otherCharges"/>
+        </property>
+        <property name="packSize" type="integer">
+            <column  name="packSize"/>
+        </property>
+        <property name="productCode" type="string">
+            <column length="30" name="productCode"/>
+        </property>
+        <property name="productName" type="string">
+            <column length="30" name="productName"/>
+        </property>
+        <property name="purchasePrice" type="double">
+            <column  name="purchasePrice"/>
+        </property>
+        <property name="quantity" type="double">
+            <column name="quantity"/>
+        </property>
+        <property name="salesPrice" type="double">
+            <column  name="salesPrice"/>
+        </property>
+
+        <property name="custProID" type="string">
+            <column length="100" name="custProID"/>
+        </property>
+
+        <property name="productType" type="string">
+            <column length="100" name="productType"/>
+        </property>
+
+        <property name="optionalText" type="string">
+            <column length="300" name="optionalText"/>
+        </property>
+
+         <property name="productDetails" type="string">
+            <column length="300" name="productDetails"/>
+        </property>
+
+         <property name="quntyInGrama" type="string">
+            <column length="300" name="quntyInGrama"/>
+        </property>
+           <property name="qntyinExice" type="string">
+            <column length="300" name="qntyinExice"/>
+        </property>
+
+
+         <many-to-one class="com.hes.pojo.Invoice" column="invoice" lazy="false" name="invoice"/>
+        
+  </class>
+</hibernate-mapping>

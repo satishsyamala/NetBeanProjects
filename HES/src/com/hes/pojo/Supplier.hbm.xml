@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hes.pojo.Supplier" schema="hes" table="Supplier">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity">
+            </generator>
+        </id>
+        <property name="name" type="string">
+            <column length="200" name="name" not-null="true" unique="true"/>
+        </property>
+        <property name="commissionerate" type="string">
+            <column length="50" name="commissionerate"/>
+        </property>
+        <property name="cstNumber" type="string">
+            <column length="50" name="cstNumber"/>
+        </property>
+        <property name="address" type="string">
+            <column length="1000" name="address"/>
+        </property>
+        <property name="tinNumber" type="string">
+            <column length="30" name="tinNumber"/>
+        </property>
+        <property name="debitEntryNo" type="string">
+            <column length="50" name="debitEntryNo"/>
+        </property>
+        <property name="cerNo" type="string">
+            <column length="50" name="cerNo"/>
+        </property>
+        <property name="discription" type="string">
+            <column length="200" name="discription"/>
+        </property>
+        <property name="division" type="string">
+            <column length="50" name="division"/>
+        </property>
+        <property name="eccNo" type="string">
+            <column length="50" name="eccNo"/>
+        </property>
+        <property name="landLine" type="string">
+            <column length="50" name="landLine"/>
+        </property>
+        <property name="phnNumber" type="string">
+            <column length="50" name="phnNumber"/>
+        </property>
+        <property name="rangeAddress" type="string">
+            <column length="1000" name="rangeAddress"/>
+        </property>
+        <property name="discount" type="double">
+            <column name="discount"/>
+        </property>
+        <property name="status" type="string">
+            <column length="50" name="status"/>
+        </property>
+        <property name="createdOn" type="java.util.Date">
+            <column name="createdOn"/>
+        </property>
+    </class>
+</hibernate-mapping>
